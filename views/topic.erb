@@ -1,0 +1,12 @@
+<style type="text/css">
+  blockquote { border: 1px solid #eee; border-left: 10px solid #eee; padding: 0px 10px 10px;}
+</style>
+
+<h1>Tweets About: <%= topic %></h1>
+
+<% tweets.each do |tweet| %>
+  <blockquote cite="<%= tweet.user.screen_name %>">
+    <p><%= tweet.text %></p>
+    - <a href="<%= tweet.user.uri %>"><%= tweet.user.screen_name %></a>
+  </blockquote>
+<% end %>
